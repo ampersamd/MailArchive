@@ -1,0 +1,29 @@
+MailArchiveRoot:
+
+
+<MailArchiveRoot>:
+	AddMailForm
+
+<AddMailForm>
+	folderPath: folder_path
+	mailName: mail_name
+	orientation: "vertical"
+
+	BoxLayout:
+		size_hint_y: 1
+		TextInput:
+			id: folder_path
+		Label:
+			text: "Path to folder"
+
+	BoxLayout:
+		size_hint_y: 1
+		TextInput:
+			id: mail_name
+		Label:
+			text: "Mail name"
+
+	Button:
+		size_hint_y: 2
+		text: "Archive"
+		on_press: root.addMail()
